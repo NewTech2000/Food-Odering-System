@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="chefsAreaPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="704.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.client.controller.ChefsAreaController">
+   <children>
+      <ImageView fitHeight="449.0" fitWidth="704.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assest/chicken-flautas.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="15.0" layoutY="71.0" prefHeight="362.0" prefWidth="676.0" style="-fx-border-color: grey;" />
+      <JFXButton fx:id="btnTakeOrder" layoutX="226.0" layoutY="92.0" onMouseClicked="#takeOrderAction" opacity="0.77" prefHeight="29.0" prefWidth="110.0" styleClass="orangebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Take Order" textFill="WHITE" />
+      <TableView fx:id="tblChefs" layoutX="25.0" layoutY="141.0" onMouseClicked="#chefTableAction" prefHeight="200.0" prefWidth="658.0">
+        <columns>
+          <TableColumn prefWidth="115.0" text="Order ID" />
+            <TableColumn prefWidth="144.0" text="Order Date" />
+            <TableColumn prefWidth="141.0" text="Order Time" />
+            <TableColumn prefWidth="130.0" text="Quantity" />
+            <TableColumn prefWidth="127.0" text="Order Status" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnFinishOrder" layoutX="315.0" layoutY="389.0" onMouseClicked="#fnshOrderAction" opacity="0.77" prefHeight="25.0" prefWidth="88.0" styleClass="bluebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Finish Order" textFill="WHITE" />
+      <Label layoutX="467.0" layoutY="15.0" prefHeight="29.0" prefWidth="180.0" style="-fx-background-color: white;" text=" |  DINEMORE - CHEF">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgLogOut" fitHeight="29.0" fitWidth="36.0" layoutX="654.0" layoutY="15.0" onMouseClicked="#logoutAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/Logout_Rounded_Up_48px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbldate" layoutX="24.0" layoutY="16.0" prefHeight="27.0" prefWidth="135.0" style="-fx-background-color: white;" text=" ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbltime" layoutX="165.0" layoutY="16.0" prefHeight="27.0" prefWidth="141.0" style="-fx-background-color: white;" text=" ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="86.0" prefHeight="44.0" prefWidth="187.0" style="-fx-background-color: white;" text=" | Check Orders">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOrderId" layoutX="25.0" layoutY="356.0" onAction="#orderIdAction" prefHeight="18.0" prefWidth="148.0" promptText="Order ID" />
+      <TextField fx:id="txtUpdateStatus" disable="true" layoutX="181.0" layoutY="387.0" onAction="#updateStatusAction" prefHeight="25.0" prefWidth="128.0" text="Cooked" />
+      <TextField fx:id="txtStatus" disable="true" layoutX="181.0" layoutY="356.0" onAction="#statusAction" prefHeight="25.0" prefWidth="128.0" text="Cooking" />
+      <TextField fx:id="txtChefID" layoutX="25.0" layoutY="387.0" onAction="#chefIdAction" prefHeight="25.0" prefWidth="148.0" promptText="Chef ID" />
+      <JFXButton fx:id="btnUpdate" layoutX="315.0" layoutY="358.0" onMouseClicked="#updateAction" opacity="0.77" prefHeight="25.0" prefWidth="88.0" styleClass="greenbuttons" stylesheets="@../assest/ForBlueButtons.css" text="Update" textFill="WHITE" />
+      <TextField fx:id="txtmenuID" layoutX="447.0" layoutY="356.0" onAction="#menuIdAction" prefHeight="25.0" prefWidth="118.0" promptText="Menu ID" />
+      <TextField fx:id="txtMenuName" layoutX="573.0" layoutY="356.0" onAction="#menuNameAction" prefHeight="25.0" prefWidth="110.0" promptText="Menu Name" />
+   </children>
+</AnchorPane>

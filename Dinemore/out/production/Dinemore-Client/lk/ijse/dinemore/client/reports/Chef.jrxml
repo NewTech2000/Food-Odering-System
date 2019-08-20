@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Chef" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0bc9e2ac-6a1c-4d6b-a3d6-aebe6c1a4dba">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="chalos.xml"/>
+	<queryString language="SQL">
+		<![CDATA[select * from chef]]>
+	</queryString>
+	<field name="chef_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="chef_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="chef"/>
+	</field>
+	<field name="chef_Nic" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="chef_Nic"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="chef"/>
+	</field>
+	<field name="chef_address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="chef_address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="chef"/>
+	</field>
+	<field name="chef_mobile" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="chef_mobile"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="chef"/>
+	</field>
+	<field name="chef_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="chef_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="chef"/>
+	</field>
+	<group name="chef_id">
+		<groupExpression><![CDATA[$F{chef_id}]]></groupExpression>
+	</group>
+	<group name="chef_Nic">
+		<groupExpression><![CDATA[$F{chef_Nic}]]></groupExpression>
+	</group>
+	<group name="chef_address">
+		<groupExpression><![CDATA[$F{chef_address}]]></groupExpression>
+	</group>
+	<group name="chef_mobile">
+		<groupExpression><![CDATA[$F{chef_mobile}]]></groupExpression>
+	</group>
+	<group name="chef_name">
+		<groupExpression><![CDATA[$F{chef_name}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

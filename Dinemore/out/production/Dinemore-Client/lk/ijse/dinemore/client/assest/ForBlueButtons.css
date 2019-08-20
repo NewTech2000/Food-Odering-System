@@ -1,0 +1,211 @@
+.bluebuttons {
+    -fx-font-weight: lighter;
+    -fx-background-color: blue;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: white;
+}
+
+.bluebuttons:hover {
+    -fx-font-weight: lighter;
+    -fx-background-color:  #a6a6a6;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: blue;
+    -fx-border-radius: 20;
+    -fx-border-color:  #666633;
+    -fx-border-width: 3;
+}
+
+.bluebuttons:pressed {
+    -fx-font-weight: lighter;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: blue;
+    -fx-border-color: blue;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 2;
+}
+
+.greenbuttons {
+    -fx-font-weight: lighter;
+    -fx-background-color: green;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: white;
+}
+
+.greenbuttons:hover {
+    -fx-font-weight: lighter;
+    -fx-background-color:#a6a6a6 ;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: green;
+    -fx-border-radius: 20;
+    -fx-border-color:  #666633;
+    -fx-border-width: 3;
+}
+
+.greenbuttons:pressed {
+    -fx-font-weight: lighter;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: green;
+    -fx-border-color: green;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 2;
+
+}
+.redbuttons {
+
+    -fx-font-weight: lighter;
+    -fx-background-color: red;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: white;
+}
+.redbuttons:hover {
+    -fx-font-weight: lighter;
+    -fx-background-color:#a6a6a6;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: red;
+    -fx-border-radius: 20;
+    -fx-border-color:  #666633;
+    -fx-border-width: 3;
+}
+
+.redbuttons:pressed {
+    -fx-font-weight: lighter;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: #b30000;
+    -fx-border-color: #b30000;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 2;
+
+}
+.yellowbuttons {
+
+    -fx-font-weight: lighter;
+    -fx-background-color: #e6ac00;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: white;
+}
+.yellowbuttons:hover {
+    -fx-font-weight: lighter;
+    -fx-background-color:white;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: #e6ac00;
+    -fx-border-radius: 20;
+    -fx-border-color:  #666633;
+    -fx-border-width: 3;
+}
+
+.yellowbuttons:pressed {
+    -fx-font-weight: lighter;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: #e6ac00;
+    -fx-border-color: #e6ac00;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 2;
+
+}
+.orangebuttons {
+
+    -fx-font-weight: lighter;
+    -fx-background-color:  #ff6600;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: white;
+}
+.orangebuttons:hover {
+    -fx-font-weight: lighter;
+    -fx-background-color:#a6a6a6;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill:  #ff6600;
+    -fx-border-radius: 20;
+    -fx-border-color:  #666633;
+    -fx-border-width: 3;
+}
+
+.orangebuttons:pressed {
+    -fx-font-weight: lighter;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill:  #ff6600;
+    -fx-border-color:  #ff6600;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 2;
+
+}
+.Graybuttons {
+
+    -fx-font-weight: lighter;
+    -fx-background-color:  #a6a6a6;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: white;
+}
+.Graybuttons:hover {
+    -fx-font-weight: lighter;
+    -fx-background-color:white;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill:black;
+    -fx-border-radius: 20;
+    -fx-border-color:  #666633;
+    -fx-border-width: 3;
+}
+
+.Graybuttons:pressed {
+    -fx-font-weight: lighter;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill:  black;
+    -fx-border-color:  #a6a6a6;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 2;
+
+}
+.logbutton{
+
+    -fx-font-weight: lighter;
+    -fx-background-color:  blue;
+    -fx-background-radius: 22;
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+}
+.logbutton:hover {
+    -fx-font-weight: lighter;
+    -fx-background-color:Gray;
+    -fx-background-radius: 22;
+    -fx-font-size: 16;
+    -fx-text-fill: black;
+    -fx-border-radius: 20;
+    -fx-border-color:  #666633;
+    -fx-border-width: 3;
+}
+
+.logbutton:pressed {
+    -fx-font-weight: lighter;
+    -fx-background-radius: 22;
+    -fx-font-size: 13;
+    -fx-text-fill: blue;
+    -fx-border-color:  blue;
+    -fx-border-radius: 20;
+    -fx-border-width: 3;
+    -fx-rotate: 0.1;
+
+}
+

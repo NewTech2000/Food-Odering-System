@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.client.controller.ReceptionController">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="497.0" prefWidth="836.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Manage Orders">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="836.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="497.0" fitWidth="836.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../assest/Cheesy-Chicken-Subs_exps11863_CW143433D03_21_1b_RMS-1-696x696.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="38.0" prefHeight="201.0" prefWidth="513.0" style="-fx-border-color: grey;" />
+                        <TextField fx:id="txtCustomerId" layoutX="23.0" layoutY="87.0" onAction="#custIdAction" prefHeight="25.0" prefWidth="131.0" promptText="Customer ID" />
+                        <TextField fx:id="txtCustomerName" layoutX="23.0" layoutY="122.0" onAction="#nameAction" prefHeight="25.0" prefWidth="366.0" promptText="Customer Name" />
+                        <TextField fx:id="txtCustomerNic" layoutX="164.0" layoutY="87.0" onAction="#nicAction" prefHeight="25.0" prefWidth="225.0" promptText="Customer NIC" />
+                        <TextField fx:id="txtCustomerAddress" layoutX="23.0" layoutY="155.0" onAction="#addressAction" prefHeight="25.0" prefWidth="366.0" promptText="Customer Address" />
+                        <TextField fx:id="txtCustomerMobile" layoutX="23.0" layoutY="190.0" onAction="#mobileAction" prefHeight="25.0" prefWidth="239.0" promptText="Customer Mobile" />
+                        <Label layoutX="23.0" layoutY="43.0" prefHeight="35.0" prefWidth="356.0" text="| Customer ">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnCustomerSearch" layoutX="405.0" layoutY="87.0" onMouseClicked="#custSearchAction" opacity="0.62" prefHeight="25.0" prefWidth="85.0" styleClass="Graybuttons" stylesheets="@../assest/ForBlueButtons.css" text="Search" textFill="WHITE" />
+                        <JFXButton fx:id="btnCancel" layoutX="389.0" layoutY="201.0" onMouseClicked="#cancelAction" opacity="0.83" prefHeight="29.0" prefWidth="105.0" styleClass="orangebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Cancel" textFill="WHITE" />
+                        <Label layoutX="534.0" layoutY="35.0" prefHeight="417.0" prefWidth="295.0" style="-fx-border-color: grey;" />
+                        <JFXComboBox fx:id="cmbMenuCode" focusColor="#ee1f14" labelFloat="true" layoutX="542.0" layoutY="82.0" onAction="#mennuCodeAction" prefHeight="25.0" prefWidth="204.0" promptText="Menu Name" />
+                        <TextField fx:id="txtMenuCategory" layoutX="542.0" layoutY="126.0" onAction="#categoryAction" prefHeight="25.0" prefWidth="268.0" promptText="Menu Category" />
+                        <TextField fx:id="txtMenuCode" layoutX="542.0" layoutY="168.0" onAction="#menuCodeAction" promptText="Menu  Code" />
+                        <TextField fx:id="txtUnitPrice" layoutX="696.0" layoutY="168.0" onAction="#unitPriceAction" prefHeight="25.0" prefWidth="121.0" promptText="Unit Price" />
+                        <TextField fx:id="txtOrderId" layoutX="542.0" layoutY="227.0" onAction="#orderIdAction" promptText="Order ID" />
+                        <TextField fx:id="txtOrderQty" layoutX="542.0" layoutY="306.0" onAction="#qtyAction" promptText="Orderd Quantity" />
+                        <TextField fx:id="txtAmmount" layoutX="702.0" layoutY="306.0" onAction="#ammountAction" prefHeight="25.0" prefWidth="121.0" promptText="Ammount" />
+                        <DatePicker fx:id="orderDate" layoutX="542.0" layoutY="267.0" onAction="#orderDateAction" prefHeight="25.0" prefWidth="150.0" promptText="Date" />
+                        <JFXButton fx:id="btnAddToCart" layoutX="321.0" layoutY="432.0" onMouseClicked="#addToCartAction" opacity="0.87" prefHeight="25.0" prefWidth="100.0" styleClass="bluebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Place Order" textFill="WHITE" />
+                        <JFXButton fx:id="btnAddToCartCancel" layoutX="732.0" layoutY="373.0" onMouseClicked="#addToCartCancelAction" opacity="0.87" prefHeight="25.0" prefWidth="85.0" styleClass="orangebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Cancel" textFill="WHITE" />
+                        <TableView fx:id="tblOrder" layoutX="14.0" layoutY="248.0" prefHeight="150.0" prefWidth="514.0">
+                          <columns>
+                              <TableColumn prefWidth="75.0" text="Menu Code" />
+                              <TableColumn prefWidth="92.0" text="Menu Name" />
+                              <TableColumn prefWidth="111.0" text="Unit Price" />
+                              <TableColumn prefWidth="92.0" text="Quantity" />
+                              <TableColumn text="Date" />
+                              <TableColumn prefWidth="63.0" text="Total" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="btnPlaceOrder" layoutX="427.0" layoutY="431.0" onMouseClicked="#placeOrderCancel" opacity="0.87" prefHeight="25.0" prefWidth="100.0" styleClass="orangebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Cancel" textFill="WHITE" />
+                        <JFXButton fx:id="btnPlaceCancel" layoutX="626.0" layoutY="373.0" onMouseClicked="#placeOrderAction" opacity="0.87" prefHeight="25.0" prefWidth="100.0" styleClass="bluebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Add To Cart" textFill="WHITE" />
+                        <Label fx:id="lbldate" layoutX="14.0" layoutY="6.0" prefHeight="27.0" prefWidth="135.0" style="-fx-background-color: white;" text=" ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbltime" layoutX="155.0" layoutY="6.0" prefHeight="27.0" prefWidth="141.0" style="-fx-background-color: white;" text=" ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="533.0" layoutY="2.0" prefHeight="29.0" prefWidth="294.0" style="-fx-background-color: white;" text=" |  DINEMORE - RECEPTION">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgLogOut" fitHeight="26.0" fitWidth="38.0" layoutX="802.0" layoutY="4.0" onMouseClicked="#logOutAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assest/Logout_Rounded_Up_48px.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtReciption" layoutX="402.0" layoutY="43.0" onAction="#reciptionAction" prefHeight="25.0" prefWidth="119.0" promptText="Enter Reciption ID" />
+                        <TextField fx:id="txtStatus" disable="true" layoutX="14.0" layoutY="404.0" onAction="#statusAction" text="Placed order" />
+                        <TextField fx:id="txtTotalAmmount" layoutX="369.0" layoutY="402.0" onAction="#totalAmmountAction" prefHeight="25.0" prefWidth="158.0" promptText="Total " />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Manage Views">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="497.0" fitWidth="836.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../assest/Cheesy-Chicken-Subs_exps11863_CW143433D03_21_1b_RMS-1-696x696.jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="customerReports" layoutX="675.0" layoutY="308.0" onMouseClicked="#customerReportAction" opacity="0.79" prefHeight="25.0" prefWidth="130.0" styleClass="yellowbuttons" stylesheets="@../assest/ForBlueButtons.css" text="All Customers" textFill="WHITE" />
+                        <Label layoutX="14.0" layoutY="35.0" prefHeight="211.0" prefWidth="531.0" style="-fx-border-color: grey;" />
+                        <TableView fx:id="tblCustomer" layoutX="22.0" layoutY="81.0" prefHeight="157.0" prefWidth="516.0">
+                          <columns>
+                            <TableColumn prefWidth="54.0" text="ID" />
+                            <TableColumn prefWidth="107.0" text="Name" />
+                              <TableColumn prefWidth="132.0" text="NIC" />
+                              <TableColumn prefWidth="130.0" text="Address" />
+                              <TableColumn prefWidth="92.0" text="Mobile" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="23.0" layoutY="39.0" prefHeight="35.0" prefWidth="142.0" text="| Customer ">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="552.0" layoutY="36.0" prefHeight="210.0" prefWidth="279.0" style="-fx-border-color: grey;" />
+                        <TableView fx:id="tblMenus" layoutX="559.0" layoutY="81.0" prefHeight="157.0" prefWidth="269.0">
+                          <columns>
+                            <TableColumn prefWidth="56.0" text="Code" />
+                            <TableColumn prefWidth="86.0" text="Category" />
+                              <TableColumn prefWidth="67.0" text="Name" />
+                              <TableColumn prefWidth="59.0" text="price" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="559.0" layoutY="39.0" prefHeight="35.0" prefWidth="142.0" text="| Menu">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="255.0" prefHeight="199.0" prefWidth="621.0" style="-fx-border-color: grey;" />
+                        <TableView fx:id="tblOrderNew" layoutX="22.0" layoutY="311.0" prefHeight="137.0" prefWidth="608.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Order ID" />
+                            <TableColumn prefWidth="75.0" text="Customer ID" />
+                              <TableColumn prefWidth="75.0" text="Menu Code" />
+                              <TableColumn prefWidth="75.0" text="Date" />
+                              <TableColumn prefWidth="75.0" text="Time" />
+                              <TableColumn prefWidth="75.0" text="Quantity" />
+                              <TableColumn prefWidth="75.0" text="Unit Price" />
+                              <TableColumn prefWidth="75.0" text="Total" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="23.0" layoutY="264.0" prefHeight="35.0" prefWidth="142.0" text="| Orders ">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="orderReports" layoutX="675.0" layoutY="376.0" onMouseClicked="#orderReportAction" opacity="0.79" prefHeight="25.0" prefWidth="130.0" styleClass="yellowbuttons" stylesheets="@../assest/ForBlueButtons.css" text="Orders" textFill="WHITE" />
+                        <JFXButton fx:id="btnItemReports" layoutX="675.0" layoutY="343.0" onMouseClicked="#itemReportAction" opacity="0.79" prefHeight="25.0" prefWidth="130.0" styleClass="yellowbuttons" stylesheets="@../assest/ForBlueButtons.css" text="Menu Items" textFill="WHITE" />
+                        <Label layoutX="547.0" layoutY="3.0" prefHeight="29.0" prefWidth="284.0" style="-fx-background-color: white;" text=" |  DINEMORE - RECEPTION">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="4.0" prefHeight="27.0" prefWidth="92.0" style="-fx-background-color: black;" text=" ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDate" layoutX="14.0" layoutY="4.0" prefHeight="27.0" prefWidth="148.0" style="-fx-background-color: white;" text=" ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTime" layoutX="147.0" layoutY="4.0" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: white;" text=" ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="View Status">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="497.0" fitWidth="836.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../assest/Cheesy-Chicken-Subs_exps11863_CW143433D03_21_1b_RMS-1-696x696.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="77.0" layoutY="91.0" prefHeight="262.0" prefWidth="682.0" style="-fx-border-color: grey;" />
+                        <Label layoutX="86.0" layoutY="93.0" prefHeight="35.0" prefWidth="261.0" text="| VIEW ORDER STATUS">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="547.0" layoutY="3.0" prefHeight="29.0" prefWidth="284.0" style="-fx-background-color: white;" text=" |  DINEMORE - RECEPTION">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="4.0" prefHeight="27.0" prefWidth="92.0" style="-fx-background-color: black;" text=" ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDate1" layoutX="14.0" layoutY="4.0" prefHeight="27.0" prefWidth="148.0" style="-fx-background-color: white;" text=" ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTime1" layoutX="147.0" layoutY="4.0" prefHeight="27.0" prefWidth="170.0" style="-fx-background-color: white;" text=" ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtStatusOrderID" layoutX="246.0" layoutY="172.0" onAction="#statusOrderIdAction" prefHeight="38.0" prefWidth="324.0" promptText="Enter Order ID" />
+                        <TextField fx:id="txtSearchStatus" alignment="CENTER" layoutX="290.0" layoutY="222.0" onAction="#searchStatusAction" prefHeight="38.0" prefWidth="241.0" promptText="Status">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

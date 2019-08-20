@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Orders" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2c707177-1cd2-4477-8c29-935c41a3d603">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="chalos.xml"/>
+	<queryString language="SQL">
+		<![CDATA[select * from orders]]>
+	</queryString>
+	<field name="orderid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="orderid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="endCooking" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="endCooking"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="endDeliver" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="endDeliver"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="orderTime" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="orderTime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="orderdate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="orderdate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="payment_Status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="payment_Status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="startCooking" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="startCooking"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="startDeliver" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="startDeliver"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="chef_chef_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="chef_chef_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="customer_customerId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="customer_customerId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="delivery_delivery_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="delivery_delivery_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="reciption_reciption_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="reciption_reciption_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<group name="orderid">
+		<groupExpression><![CDATA[$F{orderid}]]></groupExpression>
+	</group>
+	<group name="endCooking">
+		<groupExpression><![CDATA[$F{endCooking}]]></groupExpression>
+	</group>
+	<group name="endDeliver">
+		<groupExpression><![CDATA[$F{endDeliver}]]></groupExpression>
+	</group>
+	<group name="orderTime">
+		<groupExpression><![CDATA[$F{orderTime}]]></groupExpression>
+	</group>
+	<group name="orderdate">
+		<groupExpression><![CDATA[$F{orderdate}]]></groupExpression>
+	</group>
+	<group name="payment_Status">
+		<groupExpression><![CDATA[$F{payment_Status}]]></groupExpression>
+	</group>
+	<group name="price">
+		<groupExpression><![CDATA[$F{price}]]></groupExpression>
+	</group>
+	<group name="qty">
+		<groupExpression><![CDATA[$F{qty}]]></groupExpression>
+	</group>
+	<group name="startCooking">
+		<groupExpression><![CDATA[$F{startCooking}]]></groupExpression>
+	</group>
+	<group name="startDeliver">
+		<groupExpression><![CDATA[$F{startDeliver}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<group name="chef_chef_id">
+		<groupExpression><![CDATA[$F{chef_chef_id}]]></groupExpression>
+	</group>
+	<group name="customer_customerId">
+		<groupExpression><![CDATA[$F{customer_customerId}]]></groupExpression>
+	</group>
+	<group name="delivery_delivery_id">
+		<groupExpression><![CDATA[$F{delivery_delivery_id}]]></groupExpression>
+	</group>
+	<group name="reciption_reciption_id">
+		<groupExpression><![CDATA[$F{reciption_reciption_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

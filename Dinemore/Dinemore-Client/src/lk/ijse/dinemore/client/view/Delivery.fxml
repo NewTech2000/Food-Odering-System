@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="697.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.client.controller.DeliveryManageController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="351.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="482.0" fitWidth="697.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assest/1442913876_mnu_1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="62.0" prefHeight="262.0" prefWidth="667.0" style="-fx-border-color: grey;" />
+      <TextField fx:id="txtDeliveryId" layoutX="30.0" layoutY="100.0" onAction="#deliveryIdAction" prefHeight="25.0" prefWidth="140.0" promptText="Delivery ID" />
+      <TextField fx:id="txtContact" layoutX="30.0" layoutY="229.0" onAction="#contactAction" prefHeight="25.0" prefWidth="275.0" promptText="Contact No" />
+      <TextField fx:id="txtAddress" layoutX="30.0" layoutY="185.0" onAction="#addressAction" prefHeight="25.0" prefWidth="579.0" promptText="Address" />
+      <TextField fx:id="txtName" layoutX="30.0" layoutY="143.0" onAction="#nameAction" prefHeight="25.0" prefWidth="579.0" promptText="Name" />
+      <JFXButton fx:id="btnSearch" layoutX="340.0" layoutY="101.0" onMouseClicked="#searchAction" opacity="0.87" prefHeight="29.0" prefWidth="89.0" styleClass="Graybuttons" stylesheets="@../assest/ForBlueButtons.css" text="Search" textFill="WHITE" />
+      <JFXButton fx:id="btnCancel" layoutX="592.0" layoutY="284.0" onMouseClicked="#cancelAction" opacity="0.87" prefHeight="25.0" prefWidth="82.0" styleClass="yellowbuttons" stylesheets="@../assest/ForBlueButtons.css" text="Cancel" textFill="WHITE" />
+      <JFXButton fx:id="btnDelete" layoutX="499.0" layoutY="284.0" onMouseClicked="#deleteAction" opacity="0.87" prefHeight="25.0" prefWidth="82.0" styleClass="redbuttons" stylesheets="@../assest/ForBlueButtons.css" text="Delete" textFill="WHITE" />
+      <JFXButton fx:id="btnUpdate" layoutX="403.0" layoutY="284.0" onMouseClicked="#updateAction" opacity="0.87" prefHeight="25.0" prefWidth="82.0" styleClass="greenbuttons" stylesheets="@../assest/ForBlueButtons.css" text="Update" textFill="WHITE" />
+      <JFXButton fx:id="btnSave" layoutX="307.0" layoutY="284.0" onMouseClicked="#saveAction" opacity="0.87" prefHeight="25.0" prefWidth="82.0" styleClass="bluebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Save" textFill="WHITE" />
+      <Label layoutX="4.0" layoutY="7.0" prefHeight="46.0" prefWidth="329.0" text=" | Manage Delivery">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblDelivery" layoutX="14.0" layoutY="331.0" prefHeight="143.0" prefWidth="667.0">
+         <columns>
+            <TableColumn prefWidth="65.0" text="ID" />
+            <TableColumn prefWidth="133.0" text="Name" />
+            <TableColumn prefWidth="128.0" text="Address" />
+            <TableColumn prefWidth="128.0" text="Contact No" />
+            <TableColumn prefWidth="140.0" text="NIC" />
+            <TableColumn prefWidth="72.0" text="Bike No" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtNic" layoutX="320.0" layoutY="229.0" onAction="#nicAction" prefHeight="25.0" prefWidth="291.0" promptText="NIC" />
+      <TextField fx:id="txtBikeNo" layoutX="180.0" layoutY="101.0" onAction="#bikeNoAction" prefHeight="25.0" prefWidth="140.0" promptText="Bike No" />
+      <Label fx:id="lbldate" layoutX="399.0" layoutY="17.0" prefHeight="27.0" prefWidth="135.0" style="-fx-background-color: white;" text=" ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbltime" layoutX="540.0" layoutY="17.0" prefHeight="27.0" prefWidth="141.0" style="-fx-background-color: white;" text=" ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

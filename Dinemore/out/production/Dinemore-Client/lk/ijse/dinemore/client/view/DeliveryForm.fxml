@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="deliveryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="869.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dinemore.client.controller.DeliveryFormController">
+   <children>
+      <ImageView fitHeight="413.0" fitWidth="869.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assest/cheesy-chicken-flautas.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="15.0" layoutY="57.0" prefHeight="267.0" prefWidth="619.0" style="-fx-border-color: grey;" />
+      <TableView fx:id="tblDelivery" layoutX="37.0" layoutY="141.0" onMouseClicked="#deliveryTableClick" prefHeight="156.0" prefWidth="588.0">
+         <columns>
+            <TableColumn prefWidth="143.0" text="Order ID" />
+            <TableColumn prefWidth="134.0" text="Quantity" />
+            <TableColumn prefWidth="137.0" text="Price" />
+            <TableColumn prefWidth="173.0" text="Status" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnGerOrder" layoutX="258.0" layoutY="84.0" onMouseClicked="#getOrderAction" opacity="0.77" prefHeight="29.0" prefWidth="110.0" styleClass="bluebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Get Order" textFill="WHITE" />
+      <Label layoutX="27.0" layoutY="79.0" prefHeight="38.0" prefWidth="230.0" style="-fx-background-color: white;" text=" | Delivering Orders">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="611.0" layoutY="19.0" prefHeight="29.0" prefWidth="207.0" style="-fx-background-color: white;" text="  DELIVERY">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgLogOut" fitHeight="29.0" fitWidth="36.0" layoutX="827.0" layoutY="19.0" onMouseClicked="#logoutAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/Logout_Rounded_Up_48px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbldate" layoutX="15.0" layoutY="20.0" prefHeight="27.0" prefWidth="135.0" style="-fx-background-color: white;" text=" ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbltime" layoutX="156.0" layoutY="20.0" prefHeight="27.0" prefWidth="141.0" style="-fx-background-color: white;" text=" ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnDelivery" layoutX="522.0" layoutY="359.0" onMouseClicked="#deliveryAction" opacity="0.77" prefHeight="29.0" prefWidth="110.0" styleClass="orangebuttons" stylesheets="@../assest/ForBlueButtons.css" text="Deliverd Order" textFill="WHITE" />
+      <Label layoutX="643.0" layoutY="57.0" prefHeight="336.0" prefWidth="222.0" style="-fx-border-color: grey; -fx-background-color: white;" />
+      <TextField fx:id="txtCustomerID" layoutX="651.0" layoutY="101.0" prefHeight="25.0" prefWidth="135.0" promptText="Customer ID" />
+      <TextField fx:id="txtCustomerName" layoutX="651.0" layoutY="137.0" onAction="#custNameAction" prefHeight="25.0" prefWidth="201.0" promptText="Customer Name" />
+      <TextField fx:id="txtMobile" layoutX="651.0" layoutY="173.0" onAction="#mobileAction" prefHeight="25.0" prefWidth="166.0" promptText="Customer Mobile" />
+      <TextField fx:id="txtAddress" layoutX="651.0" layoutY="212.0" onAction="#addressAction" prefHeight="25.0" prefWidth="201.0" promptText="Customer Address" />
+      <JFXButton fx:id="btnCustSearch" layoutX="787.0" layoutY="67.0" onMouseClicked="#custSearchAction" opacity="0.77" prefHeight="25.0" prefWidth="70.0" styleClass="Graybuttons" stylesheets="@../assest/ForBlueButtons.css" text="Search" textFill="WHITE" />
+      <TextField fx:id="txtStatus" disable="true" layoutX="476.0" layoutY="101.0" onAction="#deliveryAction" prefHeight="15.0" prefWidth="78.0" text="Delivering" />
+      <TextField fx:id="txtDeliveryID" layoutX="396.0" layoutY="101.0" onAction="#statusAction" prefHeight="25.0" prefWidth="78.0" promptText="Delivery ID" />
+      <TextField fx:id="txtOrderId" layoutX="394.0" layoutY="67.0" onAction="#orderIDAction" prefHeight="25.0" prefWidth="230.0" promptText="Order ID" />
+      <JFXButton fx:id="btnUpdate" layoutX="557.0" layoutY="101.0" onMouseClicked="#updateAction" opacity="0.77" prefHeight="25.0" prefWidth="70.0" styleClass="greenbuttons" stylesheets="@../assest/ForBlueButtons.css" text="Update" textFill="WHITE" />
+      <TextField fx:id="txtDeliveringStatus" disable="true" layoutX="534.0" layoutY="328.0" onAction="#deliveringStatus" prefHeight="25.0" prefWidth="100.0" text="Delivered" />
+      <TextField fx:id="txtPaid" alignment="CENTER" disable="true" layoutX="394.0" layoutY="328.0" onAction="#paymentStatus" prefHeight="25.0" prefWidth="135.0" text="Paid" />
+      <TextField fx:id="txtOrderSearchID" layoutX="651.0" layoutY="67.0" onAction="#orderIdSearchAction" prefHeight="25.0" prefWidth="127.0" promptText="Order ID" />
+   </children>
+</AnchorPane>
